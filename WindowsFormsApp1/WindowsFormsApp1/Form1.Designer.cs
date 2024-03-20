@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FormPremierLeague
+    partial class Form_premier
     {
         /// <summary>
         /// Required designer variable.
@@ -28,164 +28,176 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTimID = new System.Windows.Forms.Label();
-            this.textBoxTimID = new System.Windows.Forms.TextBox();
-            this.dataGridViewLeage = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxKapasitas = new System.Windows.Forms.TextBox();
-            this.textBoxStadium = new System.Windows.Forms.TextBox();
-            this.textBoxTimName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelKota = new System.Windows.Forms.Label();
-            this.labelManager = new System.Windows.Forms.Label();
-            this.textBoxKota = new System.Windows.Forms.TextBox();
-            this.textBoxManager = new System.Windows.Forms.TextBox();
-            this.buttonInput = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeage)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.tb_tim = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tb_namat = new System.Windows.Forms.TextBox();
+            this.tb_stadium = new System.Windows.Forms.TextBox();
+            this.tb_kapasitas = new System.Windows.Forms.TextBox();
+            this.tb_kota = new System.Windows.Forms.TextBox();
+            this.lb_tim = new System.Windows.Forms.Label();
+            this.lb_namat = new System.Windows.Forms.Label();
+            this.lb_stadium = new System.Windows.Forms.Label();
+            this.lb_kapasitas = new System.Windows.Forms.Label();
+            this.lb_kota = new System.Windows.Forms.Label();
+            this.lb_manager = new System.Windows.Forms.Label();
+            this.tb_manager = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bt_input = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelTimID
+            // tb_tim
             // 
-            this.labelTimID.AutoSize = true;
-            this.labelTimID.Location = new System.Drawing.Point(110, 19);
-            this.labelTimID.Name = "labelTimID";
-            this.labelTimID.Size = new System.Drawing.Size(38, 13);
-            this.labelTimID.TabIndex = 0;
-            this.labelTimID.Text = "Tim ID";
+            this.tb_tim.Enabled = false;
+            this.tb_tim.Location = new System.Drawing.Point(230, 61);
+            this.tb_tim.Name = "tb_tim";
+            this.tb_tim.Size = new System.Drawing.Size(172, 31);
+            this.tb_tim.TabIndex = 0;
+            this.tb_tim.TextChanged += new System.EventHandler(this.tb_tim_TextChanged);
             // 
-            // textBoxTimID
+            // contextMenuStrip1
             // 
-            this.textBoxTimID.Enabled = false;
-            this.textBoxTimID.Location = new System.Drawing.Point(230, 19);
-            this.textBoxTimID.Name = "textBoxTimID";
-            this.textBoxTimID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTimID.TabIndex = 1;
-            this.textBoxTimID.TextChanged += new System.EventHandler(this.textBoxTimID_TextChanged);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridViewLeage
+            // tb_namat
             // 
-            this.dataGridViewLeage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLeage.Location = new System.Drawing.Point(113, 223);
-            this.dataGridViewLeage.Name = "dataGridViewLeage";
-            this.dataGridViewLeage.Size = new System.Drawing.Size(573, 215);
-            this.dataGridViewLeage.TabIndex = 2;
+            this.tb_namat.Location = new System.Drawing.Point(230, 127);
+            this.tb_namat.Name = "tb_namat";
+            this.tb_namat.Size = new System.Drawing.Size(172, 31);
+            this.tb_namat.TabIndex = 2;
+            this.tb_namat.TextChanged += new System.EventHandler(this.tb_namat_TextChanged);
             // 
-            // label2
+            // tb_stadium
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(110, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nama Stadium";
+            this.tb_stadium.Location = new System.Drawing.Point(230, 182);
+            this.tb_stadium.Name = "tb_stadium";
+            this.tb_stadium.Size = new System.Drawing.Size(172, 31);
+            this.tb_stadium.TabIndex = 3;
+            this.tb_stadium.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // label3
+            // tb_kapasitas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nama Tim";
+            this.tb_kapasitas.Location = new System.Drawing.Point(230, 245);
+            this.tb_kapasitas.Name = "tb_kapasitas";
+            this.tb_kapasitas.Size = new System.Drawing.Size(172, 31);
+            this.tb_kapasitas.TabIndex = 4;
             // 
-            // textBoxKapasitas
+            // tb_kota
             // 
-            this.textBoxKapasitas.Location = new System.Drawing.Point(230, 102);
-            this.textBoxKapasitas.Name = "textBoxKapasitas";
-            this.textBoxKapasitas.Size = new System.Drawing.Size(100, 20);
-            this.textBoxKapasitas.TabIndex = 4;
+            this.tb_kota.Location = new System.Drawing.Point(230, 302);
+            this.tb_kota.Name = "tb_kota";
+            this.tb_kota.Size = new System.Drawing.Size(172, 31);
+            this.tb_kota.TabIndex = 5;
+            this.tb_kota.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBoxStadium
+            // lb_tim
             // 
-            this.textBoxStadium.Location = new System.Drawing.Point(230, 76);
-            this.textBoxStadium.Name = "textBoxStadium";
-            this.textBoxStadium.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStadium.TabIndex = 5;
+            this.lb_tim.AutoSize = true;
+            this.lb_tim.Location = new System.Drawing.Point(34, 67);
+            this.lb_tim.Name = "lb_tim";
+            this.lb_tim.Size = new System.Drawing.Size(70, 25);
+            this.lb_tim.TabIndex = 6;
+            this.lb_tim.Text = "Tim id";
+            this.lb_tim.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBoxTimName
+            // lb_namat
             // 
-            this.textBoxTimName.Location = new System.Drawing.Point(230, 48);
-            this.textBoxTimName.Name = "textBoxTimName";
-            this.textBoxTimName.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTimName.TabIndex = 6;
-            this.textBoxTimName.TextChanged += new System.EventHandler(this.textBoxTimName_TextChanged);
+            this.lb_namat.AutoSize = true;
+            this.lb_namat.Location = new System.Drawing.Point(34, 127);
+            this.lb_namat.Name = "lb_namat";
+            this.lb_namat.Size = new System.Drawing.Size(102, 25);
+            this.lb_namat.TabIndex = 7;
+            this.lb_namat.Text = "Nama tim";
+            this.lb_namat.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // lb_stadium
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Kapasitas";
+            this.lb_stadium.AutoSize = true;
+            this.lb_stadium.Location = new System.Drawing.Point(34, 188);
+            this.lb_stadium.Name = "lb_stadium";
+            this.lb_stadium.Size = new System.Drawing.Size(152, 25);
+            this.lb_stadium.TabIndex = 8;
+            this.lb_stadium.Text = "Nama Stadium";
             // 
-            // labelKota
+            // lb_kapasitas
             // 
-            this.labelKota.AutoSize = true;
-            this.labelKota.Location = new System.Drawing.Point(110, 128);
-            this.labelKota.Name = "labelKota";
-            this.labelKota.Size = new System.Drawing.Size(29, 13);
-            this.labelKota.TabIndex = 8;
-            this.labelKota.Text = "Kota";
+            this.lb_kapasitas.AutoSize = true;
+            this.lb_kapasitas.Location = new System.Drawing.Point(34, 251);
+            this.lb_kapasitas.Name = "lb_kapasitas";
+            this.lb_kapasitas.Size = new System.Drawing.Size(107, 25);
+            this.lb_kapasitas.TabIndex = 9;
+            this.lb_kapasitas.Text = "Kapasitas";
             // 
-            // labelManager
+            // lb_kota
             // 
-            this.labelManager.AutoSize = true;
-            this.labelManager.Location = new System.Drawing.Point(110, 153);
-            this.labelManager.Name = "labelManager";
-            this.labelManager.Size = new System.Drawing.Size(80, 13);
-            this.labelManager.TabIndex = 9;
-            this.labelManager.Text = "Nama Manager";
-            this.labelManager.Click += new System.EventHandler(this.label4_Click);
+            this.lb_kota.AutoSize = true;
+            this.lb_kota.Location = new System.Drawing.Point(34, 308);
+            this.lb_kota.Name = "lb_kota";
+            this.lb_kota.Size = new System.Drawing.Size(56, 25);
+            this.lb_kota.TabIndex = 10;
+            this.lb_kota.Text = "Kota";
             // 
-            // textBoxKota
+            // lb_manager
             // 
-            this.textBoxKota.Location = new System.Drawing.Point(230, 125);
-            this.textBoxKota.Name = "textBoxKota";
-            this.textBoxKota.Size = new System.Drawing.Size(100, 20);
-            this.textBoxKota.TabIndex = 10;
+            this.lb_manager.AutoSize = true;
+            this.lb_manager.Location = new System.Drawing.Point(34, 369);
+            this.lb_manager.Name = "lb_manager";
+            this.lb_manager.Size = new System.Drawing.Size(158, 25);
+            this.lb_manager.TabIndex = 11;
+            this.lb_manager.Text = "Nama manager";
             // 
-            // textBoxManager
+            // tb_manager
             // 
-            this.textBoxManager.Location = new System.Drawing.Point(230, 150);
-            this.textBoxManager.Name = "textBoxManager";
-            this.textBoxManager.Size = new System.Drawing.Size(100, 20);
-            this.textBoxManager.TabIndex = 11;
+            this.tb_manager.Location = new System.Drawing.Point(230, 366);
+            this.tb_manager.Name = "tb_manager";
+            this.tb_manager.Size = new System.Drawing.Size(172, 31);
+            this.tb_manager.TabIndex = 12;
             // 
-            // buttonInput
+            // dataGridView1
             // 
-            this.buttonInput.Location = new System.Drawing.Point(197, 185);
-            this.buttonInput.Name = "buttonInput";
-            this.buttonInput.Size = new System.Drawing.Size(75, 23);
-            this.buttonInput.TabIndex = 12;
-            this.buttonInput.Text = "Input";
-            this.buttonInput.UseVisualStyleBackColor = true;
-            this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(553, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1165, 588);
+            this.dataGridView1.TabIndex = 13;
             // 
-            // FormPremierLeague
+            // bt_input
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.bt_input.Location = new System.Drawing.Point(249, 431);
+            this.bt_input.Name = "bt_input";
+            this.bt_input.Size = new System.Drawing.Size(97, 46);
+            this.bt_input.TabIndex = 14;
+            this.bt_input.Text = "input";
+            this.bt_input.UseVisualStyleBackColor = true;
+            this.bt_input.Click += new System.EventHandler(this.bt_input_Click);
+            // 
+            // Form_premier
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonInput);
-            this.Controls.Add(this.textBoxManager);
-            this.Controls.Add(this.textBoxKota);
-            this.Controls.Add(this.labelManager);
-            this.Controls.Add(this.labelKota);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxTimName);
-            this.Controls.Add(this.textBoxStadium);
-            this.Controls.Add(this.textBoxKapasitas);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridViewLeage);
-            this.Controls.Add(this.textBoxTimID);
-            this.Controls.Add(this.labelTimID);
-            this.Name = "FormPremierLeague";
-            this.Text = "FormPremier League";
+            this.ClientSize = new System.Drawing.Size(2018, 987);
+            this.Controls.Add(this.bt_input);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tb_manager);
+            this.Controls.Add(this.lb_manager);
+            this.Controls.Add(this.lb_kota);
+            this.Controls.Add(this.lb_kapasitas);
+            this.Controls.Add(this.lb_stadium);
+            this.Controls.Add(this.lb_namat);
+            this.Controls.Add(this.lb_tim);
+            this.Controls.Add(this.tb_kota);
+            this.Controls.Add(this.tb_kapasitas);
+            this.Controls.Add(this.tb_stadium);
+            this.Controls.Add(this.tb_namat);
+            this.Controls.Add(this.tb_tim);
+            this.Name = "Form_premier";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLeage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,20 +205,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelTimID;
-        private System.Windows.Forms.TextBox textBoxTimID;
-        private System.Windows.Forms.DataGridView dataGridViewLeage;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxKapasitas;
-        private System.Windows.Forms.TextBox textBoxStadium;
-        private System.Windows.Forms.TextBox textBoxTimName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelKota;
-        private System.Windows.Forms.Label labelManager;
-        private System.Windows.Forms.TextBox textBoxKota;
-        private System.Windows.Forms.TextBox textBoxManager;
-        private System.Windows.Forms.Button buttonInput;
+        private System.Windows.Forms.TextBox tb_tim;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox tb_namat;
+        private System.Windows.Forms.TextBox tb_stadium;
+        private System.Windows.Forms.TextBox tb_kapasitas;
+        private System.Windows.Forms.TextBox tb_kota;
+        private System.Windows.Forms.Label lb_tim;
+        private System.Windows.Forms.Label lb_namat;
+        private System.Windows.Forms.Label lb_stadium;
+        private System.Windows.Forms.Label lb_kapasitas;
+        private System.Windows.Forms.Label lb_kota;
+        private System.Windows.Forms.Label lb_manager;
+        private System.Windows.Forms.TextBox tb_manager;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button bt_input;
     }
 }
 

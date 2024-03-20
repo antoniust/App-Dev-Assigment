@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,110 +10,107 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormPremierLeague : Form
+    //Giselle Neyva Siahaya - 006022310030
+    public partial class Form_premier : Form
     {
-        //Antonius Trimaryono /048
-        DataTable dtLeague = new DataTable();
-        List<string> listID = new List<string>();
-
-        public FormPremierLeague()
+        public Form_premier()
         {
             InitializeComponent();
-
-            dtLeague.Columns.Add("ID Tim");
-            dtLeague.Columns.Add("Nama Tim");
-            dtLeague.Columns.Add("Nama Stadium");
-            dtLeague.Columns.Add("Kapasitas");
-            dtLeague.Columns.Add("Kota");
-            dtLeague.Columns.Add("Nama Manager");
-
-
-
-            
-           
-
+            dt = new DataTable();
         }
+        DataTable dt;
+        string id = "";
 
-        private void label4_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBoxTimID_TextChanged(object sender, EventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
-        }
-
-        private void textBoxTimName_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxTimName.Text != "")
-            {
-                string timID = textBoxTimName.Text.ToString();
-                string FirstID = timID.Substring(0, 1).ToUpper();
-                int NumID = 00;
-                string FinalID = FirstID + NumID.ToString();
-                int tes = 0;
-                int d = 0;
-
-
-                listID.Add(FirstID.ToUpper());
-
-                for (int i = 0; i < dtLeague.Rows.Count; i++)
-                {
-                    if (dtLeague.Rows[i][1] == FirstID)
-                    {
-                        tes++;
-                    }
-
-                }
-                d++;
-                if (d == 1)
-                {
-                    if (tes + 1 < 10)
-                    {
-                        textBoxTimID.Text = FirstID + "0" + (tes + 1);
-                    }
-                    else
-                    {
-                        textBoxTimID.Text = FirstID + (tes + 1);
-                    }
-                    d = 0;
-
-                }
-                tes = 0;
-               
-                
-            }
-            
-            
-        }
-
-        private void buttonInput_Click(object sender, EventArgs e)
-        {
-
-            foreach (DataRow row in dtLeague.Rows)
-            {
-                if (row[1].ToString() == textBoxTimName.Text || row[2].ToString() == textBoxStadium.Text || row[5].ToString() == textBoxManager.Text)
-                {
-                    MessageBox.Show("EroR Masszeh");
-                }
-               
-            }
-            dtLeague.Rows.Add(textBoxTimID.Text, textBoxTimName.Text, textBoxStadium.Text, textBoxKapasitas.Text, textBoxKota.Text, textBoxManager.Text);
-            dataGridViewLeage.DataSource = dtLeague;
-
-            textBoxTimID.Clear();
-            textBoxTimName.Clear();
-            textBoxStadium.Clear();
-            textBoxKapasitas.Clear();
-            textBoxKota.Clear();
-            textBoxManager.Clear();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dt.Columns.Add("tim id");
+            dt.Columns.Add("nama tim");
+            dt.Columns.Add("nama stadium");
+            dt.Columns.Add("kapasitas");
+            dt.Columns.Add("kota");
+            dt.Columns.Add("nama manager");
+            dataGridView1.DataSource = dt;
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_tim_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_input_Click(object sender, EventArgs e)
+        {
+            bool benar = true;
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row[1].ToString() == tb_namat.Text || row[2].ToString() == tb_stadium.Text || row[5].ToString() == tb_manager.Text)
+                {       
+                    benar = false;
+                }
+            }
+            if (benar == false)
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
+                dt.Rows.Add(id, tb_namat.Text, tb_stadium.Text , tb_kapasitas.Text , tb_kota.Text , tb_manager.Text);
+            }
+            tb_namat.Clear();
+            tb_stadium.Clear();
+            tb_manager.Clear();
+            tb_kapasitas.Clear();
+            tb_kota.Clear();
+            tb_tim.Clear();
+
+        }
+
+        private void tb_namat_TextChanged(object sender, EventArgs e)
+        {
+            if ( tb_namat.Text != "")
+            {
+               
+                int angka = 1;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                   
+                    if (dt.Rows[i][0].ToString().Substring(0, 1) == tb_namat.Text.Substring(0, 1).ToUpper())
+                    {
+                        angka++;
+                    }
+                }
+                if(angka < 10)
+                {
+                    id = tb_namat.Text.ToString().Substring(0, 1).ToUpper() + "0" + angka;
+                    tb_tim.Text = id;
+                }
+                else
+                {
+                    id = tb_namat.Text.ToString().Substring(0, 1).ToUpper() + angka;
+                    tb_tim.Text = id;
+                }
+             
+                
+            }
         }
     }
 }
